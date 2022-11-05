@@ -7,3 +7,5 @@ def countActiveNeighbours(field):
             elif cell is True:
                 counter += 1
     return counter
+
+
