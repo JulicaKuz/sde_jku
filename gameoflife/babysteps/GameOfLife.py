@@ -9,3 +9,6 @@ def countActiveNeighbours(field):
     return counter
 
 
+def generate_next_round(field):
+
+    return True

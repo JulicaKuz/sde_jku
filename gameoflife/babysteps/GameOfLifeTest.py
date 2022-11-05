@@ -1,6 +1,6 @@
 import unittest
 
-from gameoflife.babysteps.GameOfLife import countActiveNeighbours
+from gameoflife.babysteps.GameOfLife import countActiveNeighbours, generate_next_round
 
 
 class MyTestCase(unittest.TestCase):
@@ -28,6 +28,14 @@ class MyTestCase(unittest.TestCase):
         ]
         self.assertEqual(countActiveNeighbours(field), 3)
 
+    def test_underpopulation(self):
+        field = [
+            [False, False, False],
+            [True, False, False],
+            [False, True, True],
+        ]
+
+        self.assertTrue(generate_next_round(field))
 
 
 if __name__ == '__main__':
