@@ -9,11 +9,9 @@ def countActiveNeighbours(field):
     return counter
 
 
-
-
 def generate_next_round(field):
     # if countActiveNeighbours(field) < 2:
     #     return False
-    if countActiveNeighbours(field) == 3 or countActiveNeighbours(field)==2:
+    if countActiveNeighbours(field) in (3, 2):
         return True
     return False
