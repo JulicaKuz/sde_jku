@@ -5,7 +5,11 @@ from gameoflife.babysteps.GameOfLife import countActiveNeighbours
 
 class MyTestCase(unittest.TestCase):
     def test_neighbours(self):
-        field = 1
+        field = [
+            [False, False, False],
+            [False, True, False],
+            [False, False, True],
+        ]
         self.assertEqual(countActiveNeighbours(field), 1)
 
 
